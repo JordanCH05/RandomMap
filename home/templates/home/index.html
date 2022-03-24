@@ -4,4 +4,13 @@
 
 <h1>This is the index page</h1>
 
+<form action="">
+    {% csrf_token %}
+    {% for field in form %}
+        <label for="id_{{ field.name }}">{{ field.name }}</label>
+        <div>{{ field }}</div>
+    {% endfor %}
+</form>
+
+
 {% endblock %}
