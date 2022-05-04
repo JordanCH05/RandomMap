@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ map }}</h1>
+<p>Latitude: {{ map.latitude }}</p>
+<p>Longitude: {{ map.longitude }}</p>
+<p>Destinations: {{ map.no_of_dests }}</p>
+<p>Distance: {{ map.distance }}</p>
+
+<iframe width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen src="{{ src }}"></iframe>
+
+
+{% endblock %}

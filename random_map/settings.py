@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%gtricombnp$4u0w7fd!4ttjx*ose%hbg6pqsq1__0t5iecfd1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -127,3 +127,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-jordanch05-randommap-j94j1pyk8y1.ws-eu43.gitpod.io']
+
+GOOGLE_API_KEY = os.getenv('GM_API_KEY', '')

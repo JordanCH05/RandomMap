@@ -4,12 +4,13 @@
 
 <h1>This is the index page</h1>
 
-<form action="">
+<form action="{% url 'home' %}" method="POST">
     {% csrf_token %}
     {% for field in form %}
         <label for="id_{{ field.name }}">{{ field.name }}</label>
         <div>{{ field }}</div>
     {% endfor %}
+    <button type="submit">Submit</button>
 </form>
 
 
